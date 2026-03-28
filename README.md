@@ -1,59 +1,43 @@
-# FrontContarRegistros
+# 🚀 Frontend Angular - Gestión de Archivos CSV
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.16.
+Este proyecto es un **frontend desarrollado con Angular** que permite la **gestión de archivos CSV**, incluyendo la subida, visualización con paginación y eliminación de archivos mediante integración con una API REST.
 
-## Development server
+Forma parte de una serie de **proyectos reales**, donde se construye una aplicación completa conectando **Angular (frontend)** con **Node.js (backend)**.
+---
+## 🎓 Curso Completo
 
-To start a local development server, run:
+Si quieres ver el proyecto paso a paso, puedes acceder al curso completo aquí:
 
-```bash
-ng serve
-```
+👉 https://www.youtube.com/playlist?list=PLHYqV_0PS9KMsZDSXtqw6DnCwZSWGFPXT
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 📌 Características
 
-```bash
-ng generate component component-name
-```
+- 📤 Subida de archivos CSV desde la interfaz  
+- 📄 Visualización de archivos con **paginación**  
+- 🗑️ Eliminación de archivos consumiendo una **API DELETE**  
+- 🔄 Actualización dinámica de datos sin recargar la página  
+- ⚡ Consumo de APIs con HttpClient  
+- 🎯 Interfaz funcional enfocada en experiencia de usuario  
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🛠️ Tecnologías utilizadas
 
-## Building
+- Angular  
+- TypeScript  
+- RxJS  
+- HttpClient  
+- CSS / Bootstrap (opcional)
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## ▶️ Ejecución del proyecto
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+1. Instalar dependencias:
 
 ```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+npm install
