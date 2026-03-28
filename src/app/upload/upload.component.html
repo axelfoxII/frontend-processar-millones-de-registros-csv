@@ -1,0 +1,89 @@
+<div class="container">
+  <h2>Subir archivo CSV</h2>
+
+  <button (click)="clearData()" [disabled]="data.length === 0" class="btn-clear" style="margin-bottom:15px;">
+    Limpiar registros
+  </button>
+
+  <form (submit)="uploadFile($event)">
+    <input #fileInput type="file" (change)="onFileSelected($event)" accept=".csv" required>
+    <button type="submit" [disabled]="!seletedFile || isLoading">Subir</button>
+  </form>
+
+  <!-- Loader -->
+  <div class="loader">
+    @if(isLoading){
+
+    @if (progress < 100) { <p>Subiendo... {{progress}}%</p>
+
+      }
+
+      @if (progress === 100) {
+      <p class="processing">
+        Procesando archivo en el servidor
+        <span class="dots"></span>
+      </p>
+      }
+
+      <progress [value]="progress" max="100"></progress>
+      }
+
+  </div>
+
+  <!-- Resultados -->
+
+  @if(totalRows > 0){
+
+  <h3>Total registros: {{totalRows}}</h3>
+
+  @if(data.length){
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          @for(col of columnNames; track col){
+
+          <th>{{col}}</th>
+
+          }
+        </tr>
+      </thead>
+      <tbody>
+        @for(row of data; track row){
+
+        <tr>
+          @for(col of columnNames; track col ){
+          <td>{{row[col]}}</td>
+          }
+        </tr>
+
+        }
+        <tr>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  }
+
+
+  <!-- Paginación -->
+
+  @if(totalPages > 1){
+  <div class="pagination">
+
+    <button (click)="goToFirst()" [disabled]="currentPage ===1">⏮️ Primero</button>
+    <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">⬅️ Anterior</button>
+
+    <span>Página {{currentPage}} de {{totalPages}}</span>
+
+    <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages">Siguiente ➡️</button>
+    <button (click)="goToLast()" [disabled]="currentPage === totalPages">Último ⏭️</button>
+  </div>
+
+  }
+
+  }
+</div>

@@ -1,0 +1,83 @@
+.table-container {
+  max-width: 80%;
+  margin: 30px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+thead {
+  background-color: #f3f3f3;
+  font-weight: bold;
+}
+
+.pagination {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;   /* 🔥 Alinea verticalmente */
+  gap: 10px;
+}
+
+
+.btn-clear {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.pagination span {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.pagination button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination button,
+.pagination span {
+  height: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.processing {
+  font-size: medium;
+  font-weight: bold;
+}
+
+/* Contenedor de puntos */
+.dots::after {
+  content: "";
+  animation: dots 1.5s steps(4, end) infinite;
+}
+
+/* Animación */
+@keyframes dots {
+  0%   { content: ""; }
+  25%  { content: "."; }
+  50%  { content: ".."; }
+  75%  { content: "..."; }
+  100% { content: ""; }
+}
