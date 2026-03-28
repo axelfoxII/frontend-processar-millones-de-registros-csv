@@ -12,8 +12,6 @@ Si quieres ver el proyecto paso a paso, puedes acceder al curso completo aquí:
 
 ---
 
----
-
 ## 📌 Características
 
 - 📤 Subida de archivos CSV desde la interfaz  
