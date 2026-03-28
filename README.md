@@ -29,7 +29,7 @@ Si quieres ver el proyecto paso a paso, puedes acceder al curso completo aquí:
 - TypeScript  
 - RxJS  
 - HttpClient  
-- CSS / Bootstrap (opcional)
+- CSS 
 
 ---
 
